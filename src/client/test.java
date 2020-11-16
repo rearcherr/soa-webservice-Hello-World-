@@ -15,6 +15,7 @@ public class test {
             // 3.获取port,相当于传统类或库的方法接口
             HelloWorld_PortType service = helloWorldServiceLocator.getHelloWorld(new URL(url));
             // 4.通过port调用服务
+
             String result = service.sayHelloWorldFrom("rearcher");
             System.out.println(result);
         }catch (ServiceException | RemoteException | MalformedURLException ex){
